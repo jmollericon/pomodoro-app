@@ -19,7 +19,7 @@ export default {
     };
   },
   mounted() {
-    this.setTime();
+    this.setTime(this.$props.time);
     this.startCounDown();
   },
   computed: {
@@ -45,11 +45,16 @@ export default {
     onSecondElapse() {
       this.timeInSeconds -= 1;
     },
-    setTime() {
-      this.timeInSeconds = this.$props.time;
+    setTime(time) {
+      this.timeInSeconds = time;
     },
     getPaddedTime(value) {
       return value.toString().padStart(2, '0');
+    },
+  },
+  watch: {
+    time(newTime) {
+      this.setTime(newTime);
     },
   },
 };
