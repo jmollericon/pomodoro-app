@@ -10,7 +10,6 @@
       </Button>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -23,7 +22,7 @@ export default {
   },
   methods: {
     onClick() {
-      console.log('logo clickeado');
+      this.$router.push({ name: 'Pomodoro', params: { type: 'work' } });
     },
   },
 };
