@@ -9,10 +9,9 @@
 </template>
 
 <style lang="scss">
-body {
-  margin: 0;
-  padding: 0;
+@import '@/styles/reset';
 
+body {
   // CSS variables
   // Colors
   --app-color-primary: #E23434;
