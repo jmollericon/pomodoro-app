@@ -19,7 +19,7 @@ export default {
 .button {
   all: unset;
   width: 100%;
-  padding: 10px;
+  padding: 15px 10px;
   background-color: var(--app-color-accent);
   border-radius: 5px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);

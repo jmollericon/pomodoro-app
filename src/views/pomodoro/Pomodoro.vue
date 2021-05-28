@@ -29,10 +29,17 @@ export default {
     pomodoroTime() {
       return PomodoroTypes[this.pomodoroType].time;
     },
+    pomodoroNextUrl() {
+      return PomodoroTypes[this.pomodoroType].next_url;
+    },
   },
   methods: {
     onClick() {
-      this.$router.push({ name: 'Pomodoro', params: { type: 'rest' } });
+      if (this.pomodoroNextUrl === 'rest') {
+        this.$router.push({ name: 'Pomodoro', params: { type: 'rest' } });
+      } else {
+        this.$router.push({ name: 'Welcome' });
+      }
     },
   },
 };
